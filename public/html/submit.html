@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='videoApp'>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<!-- SCRPITS -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+	<script type="text/javascript" src="/app/app.js"></script>
+	<script type="text/javascript" src="/app/controller.js"></script>
+	<title>Top Funny Dog Videos on YouTube</title>
+</head>
+<body ng-controller='mainController'>
+	<div class="container">
+
+		<ul class="nav nav-pills">
+		  <li role="presentation"><a href="/">Home</a></li>
+		  <li role="presentation"><a href="/submit">Submit</a></li>
+		</ul>
+		<h1>Submit Your Funny Dog Video</h1>
+		<div>
+			<form action="/submit" method="POST">
+				<input name="name" placeholder="Name" class="form-control"></input>
+				<input name="videoUrl" placeholder="Youtube URL" class="form-control"></input>
+				<input name="title" placeholder="Title" class="form-control"></input>
+				<textarea name="description" placeholder="Description" class="form-control"></textarea>
+				<input type="submit" class="btn btn-primary"></input>
+			</form>
+		</div>
+
+
+	</div>
+</body>
+</html>
